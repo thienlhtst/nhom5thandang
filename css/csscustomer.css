@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --main : #e06d01;
+    --white : #fff;
+    --grey : #f5f5f5;
+    --black : #222;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+/*-----------------------------------menu----------------------------*/
+#logo
+{
+    position: relative;
+    min-width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    top: 5px;
+}
+#namelogo{
+    font-size: 40px;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    transition: 0.5s;
+}
+.navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--main);
+    border-left: 10px solid var(--main);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active
+{
+    width: 80px; 
+}
+.navigation ul
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 24px ;
+    border-bottom-left-radius: 24px ;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered
+
+{
+background: var(--white);
+}
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a
+{
+    color: var(--main);
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+   min-width: 60px;
+   height: 60px;
+   top: 10px;;
+   text-align: center;
+}
+.navigation ul li a .icon ion-icon
+{
+    font-size: 1.75em;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+}
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after
+
+{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/*--------------------------------------------main--------------------------------------*/
+.main{
+position: absolute;
+width: calc(100% - 300px);
+left: 300px;
+min-height: 100vh;
+background: var(--white);
+transition: 0.5s;
+}
+.main.active1{
+    left: 80px;
+    width: calc(100% - 80px);
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.search{
+    background-color: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   
+}
+.search:hover .search-txt{
+    width: 350px;
+}
+.search:hover .search-icon{
+ color: #00CC99;
+ width: 30px;height: 30px;
+ background: #ffffff;
+ position: relative;
+ top: -5px;
+ left: 5px;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    transition: 1.5s;
+    color: white;
+    font-size: 16px;
+    line-height: 15px;
+   width: 0px;
+   position: relative;
+   left: 20px;
+   font-weight: bold;
+}
+.search-icon{
+    position: relative;
+    bottom: 10px;
+    color: #e84118;
+    font-size: 25px;
+    font-weight: bold;
+    float: right;
+    width: 20px;height: 40px;
+    border-radius: 50%;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+.user
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartBox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+/*--------------------------------details---------------------------*/
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.details .recentOrders
+{
+   position: relative;
+   min-height: 500px;
+   display: grid;
+   background:var(--white);
+   padding: 20px;
+   border-radius: 24px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+.cardHeader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h3
+{
+    position: relative;
+    left: 5%;
+    font-weight: 700;
+    color: var(--white);
+}
+.btn
+{
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    background: var(--main);
+    color: var(--white);
+    border-radius: 10px;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead tr td
+{
+    font-weight: bold;
+    font-size: 20px;
+    pointer-events: none;
+    background: var(--main);
+    padding: 10px;
+    color: var(--white);
+}
+.details table tbody tr td
+{
+    font-weight: 500;
+    padding: 10px;
+}
+.details .recentOrders table tr
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentOrders table .end
+{
+    border-bottom: 2px solid black;
+}
+.details table tfoot tr td
+{
+    pointer-events: none;
+    padding: 10px 20px;
+    position: relative;
+    left: 43%;
+}
+.details table tfoot tr td:first-child
+{
+    position: relative;
+    left: 55%;
+}
+.details .recentOrders table tr td:last-child
+{
+    text-align: end;
+}
+.details .buttoncheck ion-icon
+{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(6, 250, 6);
+    border-radius: 50%;
+}
+.details .buttonclose1 ion-icon
+{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.status.delivered
+{
+    padding: 2px 4px;
+    background-color: rgb(78, 241, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.return
+{
+    padding: 2px 4px;
+    background-color: rgb(241, 78, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.pending
+{
+    padding: 2px 4px;
+    background-color: rgb(241, 230, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.inprogress
+{
+    padding: 2px 4px;
+    background-color: rgb(78, 189, 241);
+    color: var(--white);
+    border-radius: 4px;
+}
+/*--------------------------customer----------------------*/
+.Customers
+{
+position: relative;
+min-height: 500;
+padding: 20px;
+box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+border-radius: 20px;
+}
+.imgcustomer img
+{
+    position: relative;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.buttonproduct
+{
+    position: relative;
+    padding: 8px 24px;
+    background-color: #5100bb;
+    color: var(--white);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------*/
+.buttonclose
+{
+    position: absolute;
+    left: -100%;
+    font-size: 40px;
+    background-color: red;
+    border-radius: 50%;
+    color: var(--white);
+    top: -30px;
+    opacity: 1;
+    transition: 0.5s;
+}
+.details-1
+{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    top: 17%;
+    opacity: 1;
+    left: -100%;   /*left:175px*/
+    transition: 0.5s;
+}
+.details-1 .clone
+{
+   position: relative;
+   min-height: 500px;
+   display: grid;
+   background:var(--white);
+   padding: 20px;
+   border-radius: 24px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+.details-1 table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details-1 table thead tr td
+{
+    font-weight: bold;
+    font-size: 20px;
+    pointer-events: none;
+    background: var(--main);
+    padding: 10px;
+    color: var(--white);
+}
+.details-1 table tbody tr td
+{
+    font-weight: 500;
+    padding: 10px;
+}
+.details-1 .clone table tr
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details-1 .clone table .end
+{
+    border-bottom: 2px solid black;
+}
+.details-1 table tfoot tr td
+{
+    pointer-events: none;
+    padding: 10px 20px;
+    position: relative;
+    left: 43%;
+}
+.details-1 table tfoot tr td:first-child
+{
+    position: relative;
+    left: 55%;
+}
+.details-1 .clone table tr:hover
+{
+    color: var(--white);
+    background: var(--main);
+}
+.details-1 .clone table tr td:last-child
+{
+    text-align: end;
+}
+
+/*--------------------------------active-------------------------*/
+.buttonclose.active
+{
+    position: absolute;
+    left: 750px;
+    font-size: 40px;
+    background-color: red;
+    border-radius: 50%;
+    color: var(--white);
+    top: -30px;
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.details-1.active
+{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    top: 17%;
+    opacity: 1;
+    z-index: 1000;
+    left: 375px;   /*left:175px*/
+    transition: 0.5s;
+}
+.details-1.active .clone
+{
+   position: relative;
+   min-height: 500px;
+   display: grid;
+   background:var(--white);
+   padding: 20px;
+   border-radius: 24px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+.details-1.active table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details-1.active table thead tr td
+{
+    font-weight: bold;
+    font-size: 20px;
+    pointer-events: none;
+    background: var(--main);
+    padding: 10px;
+    color: var(--white);
+}
+.details-1.active table tbody tr td
+{
+    font-weight: 500;
+    padding: 10px;
+}
+.details-1.active .clone table tr
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details-1.active .clone table .end
+{
+    border-bottom: 2px solid black;
+}
+.details-1.active table tfoot tr td
+{
+    pointer-events: none;
+    padding: 10px 20px;
+    position: relative;
+    left: 43%;
+}
+.details-1.active table tfoot tr td:first-child
+{
+    position: relative;
+    left: 55%;
+}
+.details-1.active .clone table tr:hover
+{
+    color: var(--white);
+    background: var(--main);
+}
+.details-1.active .clone table tr td:last-child
+{
+    text-align: end;
+}
+.container.active
+{
+    opacity: 0.05;
+}
+.main.active
+{
+    opacity: 0.05;
+}

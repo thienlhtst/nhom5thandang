@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --main : #e06d01;
+    --white : #fff;
+    --grey : #f5f5f5;
+    --black : #222;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+/*-----------------------------------menu----------------------------*/
+#logo
+{
+    position: relative;
+    min-width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    top: 5px;
+}
+#namelogo{
+    font-size: 40px;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+}
+.navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--main);
+    border-left: 10px solid var(--main);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active
+{
+    width: 80px; 
+}
+.navigation ul
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 24px ;
+    border-bottom-left-radius: 24px ;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered
+
+{
+background: var(--white);
+}
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a
+{
+    color: var(--main);
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+   min-width: 60px;
+   height: 60px;
+   top: 10px;;
+   text-align: center;
+   cursor: pointer;
+}
+.navigation ul li a .icon ion-icon
+{
+    font-size: 1.75em;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+    cursor: pointer;
+}
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after
+
+{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/*--------------------------------------------main--------------------------------------*/
+.main{
+position: absolute;
+width: calc(100% - 300px);
+left: 300px;
+min-height: 100vh;
+background: var(--white);
+transition: 0.5s;
+}
+.main.active{
+    left: 80px;
+    width: calc(100% - 80px);
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.search{
+    background-color: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   
+}
+.search:hover .search-txt{
+    width: 350px;
+}
+.search:hover .search-icon{
+ color: #00CC99;
+ width: 30px;height: 30px;
+ background: #ffffff;
+ position: relative;
+ top: -5px;
+ left: 5px;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    transition: 1.5s;
+    color: white;
+    font-size: 16px;
+    line-height: 15px;
+   width: 0px;
+   position: relative;
+   left: 20px;
+   font-weight: bold;
+}
+.search-icon{
+    position: relative;
+    bottom: 10px;
+    color: #e84118;
+    font-size: 25px;
+    font-weight: bold;
+    float: right;
+    width: 20px;height: 40px;
+    border-radius: 50%;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+.user
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartBox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.cartBox .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.cartBox .card:hover
+{
+    background-color: var(--main);
+}
+.cartBox .card:hover .numbers,
+.cartBox .card:hover .cardname,
+.cartBox .card:hover .iconBox
+{
+ color: var(--white);
+}
+.cartBox .card .numbers
+{
+    position: relative;
+    color: var(--main);
+    font-size: 38px;
+    font-weight: 500;
+}
+.cartBox .card .cardname
+{
+ position: relative;
+ color: rgb(165, 161, 161);
+ font-size: 16px;
+ margin-top: 10px;
+ text-align: left;
+}
+.cartBox .card .iconBox
+{
+    position: relative;
+    font-size: 38px;
+    color: var(--main);
+}
+
+/*--------------------------------details---------------------------*/
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.details .recentOrders
+{
+   position: relative;
+   min-height: 500px;
+   display: grid;
+   background:var(--white);
+   padding: 20px;
+   border-radius: 24px;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+.cardHeader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2
+{
+    font-weight: 700;
+    color: var(--main);
+}
+.btn
+{
+    position: relative;
+    padding: 5px 10px;
+    text-decoration: none;
+    background: var(--main);
+    color: var(--white);
+    border-radius: 10px;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead tr td
+{
+    font-weight: bold;
+    font-size: 20px;
+    pointer-events: none;
+    padding: 10px;
+}
+.details table tbody tr td
+{
+    font-weight: 500;
+    padding: 10px;
+}
+.details .recentOrders table tr
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentOrders table tr:last-child
+{
+border-bottom: none;
+}
+.details .recentOrders table tr:hover
+{
+    color: var(--white);
+    background: var(--main);
+}
+.details .recentOrders table tr td:last-child
+{
+    text-align: end;
+}
+.status.delivered
+{
+    padding: 2px 4px;
+    background-color: rgb(78, 241, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.return
+{
+    padding: 2px 4px;
+    background-color: rgb(241, 78, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.pending
+{
+    padding: 2px 4px;
+    background-color: rgb(241, 230, 78);
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.inprogress
+{
+    padding: 2px 4px;
+    background-color: rgb(78, 189, 241);
+    color: var(--white);
+    border-radius: 4px;
+}
+/*--------------------------customer----------------------*/
+.Customers
+{
+position: relative;
+min-height: 500;
+padding: 20px;
+box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+border-radius: 20px;
+}
+.imgcustomer img
+{
+    position: relative;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+

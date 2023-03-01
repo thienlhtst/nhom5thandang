@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --main : #e06d01;
+    --white : #fff;
+    --grey : #f5f5f5;
+    --black : #222;
+}
+
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+   background-color: #232323;
+}
+
+/*--------------------------------details---------------------------*/
+.container
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr   ;
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.user1
+{
+    position: relative;
+    min-height: 500px;
+    width: 50%;
+    left: 50%;
+    display: grid;
+   background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.user2
+{
+    position: relative;
+    min-height: 500px;
+    width: 50%;
+    display: grid;
+   background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.container img
+{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.container img:hover 
+{
+    opacity: 1;
+}
+.container span 
+{
+    position: relative;
+    text-align: center;
+    top: -10%;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.icon 
+{
+    position: relative;
+    text-align: center;
+}
+.icon ion-icon
+{
+    position: relative;
+    padding: 24px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.icon #facebook:hover 
+{
+    color: rgb(36, 99, 235);
+}
+.icon #instagram:hover
+{
+    color: #e06d01;
+}
+.icon #twitter:hover 
+{
+    color:rgb(100, 247, 247);
+}
