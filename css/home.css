@@ -1,9 +1,7 @@
 *{
-    background-color: #000000;
+    background-color: #232323
 }
-.Header{
-    background-color: #000000;
-}
+
 #ul-head{
     display: flex;
     align-items: center;
@@ -12,7 +10,7 @@
 #ul-head li{
     
     list-style: none    ;
-    font-size:50px;
+    font-size:45px;
     
     
 }
@@ -23,6 +21,12 @@
 }
 #ul-head li:hover{
     background-color: aqua;
+}
+.container{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
 }
 .Banner
 {
@@ -42,44 +46,8 @@
 }
 
 .content{
+    margin-top: 10% ;
     font-size: 50px;
     text-align: center;
     color: white;
-}
-
-#ul-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#ul-footer{
-    margin-top: 200px;
-    list-style: none;
-    font-size: 20px;
-    
-}
-#ul-footer li{
-    color: white;
-    
-}
-#ul-footer li a{
-    text-decoration: none;
-    
-
-}
-#ul-footer .li1 a{
-    margin-left: -300px;
-    color: white;
-}
-#ul-footer .li2 a{
-    color: white;
-    margin-right: 200px;
-    margin-left: 10px;
-}
-#ul-footer .li3 a{
-    color: white;
-}
-#ul-footer .li4 a{
-    color: white;
-    margin-left: 200px;
 }
