@@ -1,0 +1,85 @@
+*{
+    background-color: #000000;
+}
+.Header{
+    background-color: #000000;
+}
+#ul-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ul-head li{
+    
+    list-style: none    ;
+    font-size:50px;
+    
+    
+}
+#ul-head li a{
+    text-decoration: none;
+    padding: 0 100px;
+
+}
+#ul-head li:hover{
+    background-color: aqua;
+}
+.Banner
+{
+    width: 100%;
+    background-color: #2F2727;
+}
+.Banner .Logo{
+    display: flex;
+
+}
+.Banner .Banner-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.content{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+#ul-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ul-footer{
+    margin-top: 200px;
+    list-style: none;
+    font-size: 20px;
+    
+}
+#ul-footer li{
+    color: white;
+    
+}
+#ul-footer li a{
+    text-decoration: none;
+    
+
+}
+#ul-footer .li1 a{
+    margin-left: -300px;
+    color: white;
+}
+#ul-footer .li2 a{
+    color: white;
+    margin-right: 200px;
+    margin-left: 10px;
+}
+#ul-footer .li3 a{
+    color: white;
+}
+#ul-footer .li4 a{
+    color: white;
+    margin-left: 200px;
+}
