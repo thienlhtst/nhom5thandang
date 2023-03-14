@@ -1,70 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/blog.css">
-    <title>Document</title>
-</head>
-<body>
-
-    <div class="Header">
-       <div id="menu">
-        <ul id="ul-head">
-        <li>
-                <a id="Logo-in" href=""> 5ThanDang </a>
-        </li>
-        <li>
-                <a id="Home-in" href=""> Home </a>
-        </li>
-        <li>
-                <a id="Blog-in" href=""> Blog </a>
-        </li>
-        <li>
-                <a id="About" href=""> About Us</a>
-        </li>
-        </ul>
-        </div>
-    </div>
-
-<div class="container">
-    <div class="Blog">
-        <div class="Blog-left">
-            <div class="title">
-                    <p> Title</p>
-            </div>
-            <div class="Date">
-                    <p> Date </p>
-            </div>
-        </div>
-        <div class="Blog-right">
-                <p> Content </p>
-        </div>
-    </div>
-    <div class="Blog">
-        <div class="Blog-left">
-                <div class="title">
-                        <p> Title</p>
-                </div>
-                <div class="Date">
-                        <p> Date </p>
-                </div>
-        </div>
-        <div class="Blog-right">
-                <p> Content </p>
-        </div>
-    </div>
+<html>
+    <head>
+        <title>About us </title>
+        <link rel="stylesheet" href="./css/blog.css">
+        <link rel="stylesheet" href="./css/aboutus.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="shortcut icon" href="./img/img_logo/logowish.jpg">
+    </head>
     
+    <body style="background-color: rgb(172, 151, 172);">
+        <div class="Header">
+                
+            <div id="menu">
+                <a href="home.html" id="logo">
+                    <img src="./img/logo.jpg" alt="">
+                </a>
+             <ul id="ul-head">
+             
+             <li>
+                     <a id="" href="home.html"> Home </a>
+             </li>
+             <li>
+                     <a id="blog.html" href=""> Blog </a>
+             </li>
+             <li>
+                     <a id="index.html" href=""> About Us</a>
+             </li>
+             </ul>
+             </div>
+         </div>
+            <!---------------------details order----------------------->
 
-    
-</div>
+          <div class="container-blog">
+            <div class="section blog1" tabindex="0">
+                <div class="content-text text-blog1">
+                    <h2>My Blog</h2>
+                    <p>Hành trình thành lập nhóm 5ThanDang!!</p>
+
+                </div>  
+                <div class="flex-control-nav-wrapper">
+                    <ol class="flex-control-nav flex-control-paging">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                    </ol>
+                </div>
+                <div class="content-background background-blog1">
+
+                </div>
+                <a class="scrolldown js-scroll-to" href="#choose-design">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </a>
+
+            </div>
+            <div class="section blog2">
+                <div class="content-text text-blog2">
+                    <h3>Tiềm năng ngành Information Technology</h3>
+                        <p style="text-align: justify; padding-top: 20px;">Công nghệ thông tin ngày càng trở thành một ngành học “hot” và thu hút nhiều bạn trẻ. Đặc biệt đối với các bạn yêu thích máy tính và đam mê công nghệ thông tin. Tuy nhiên không phải ai cũng hiểu rõ ngành công nghệ thông tin là gì? Cùng Kiến Guru Live tìm hiểu những thông tin liên quan về ngành phát triển mũi nhọn trên toàn cầu hàng đầu hiện nay.</p>
+                </div>
+                <div class="content-background background-blog2">
+
+                </div>
+                    <div class="link-blog2">
+                        <a href="">READ MORE</a>
+                    </div>
+            </div>
+            <div class="section blog3">
+                <div class="content-text text-blog3">
+                    <h3>Đắc nhân tâm: Cuốn sách khiến bạn không   thành súc vật </h3>
+                        <p style="text-align: justify; padding-top: 20px;"></p>
+                </div>
+                <div class="content-background background-blog3">
+
+                </div>
+                    <div class="link-blog3">
+                        <a href="">READ MORE</a>
+                    </div>
+            </div>
+            
+
+          </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-1">
-                <img src="./img/logoAnCap.jpg" alt="" /><br/>
+                <img src="./img/logo.jpg" alt="" /><br/>
                 <span>5ThanDang</span><br />
                 <span> Copyright © 2022</span><br />
                 <span> All rights reserved.</span>
@@ -93,6 +113,7 @@
             </div>
         </div>
     </footer>
-</body>
-
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
