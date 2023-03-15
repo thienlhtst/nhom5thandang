@@ -1,0 +1,40 @@
+.Header{
+    position: relative;
+    height: 100px;
+    z-index: 1;
+}
+#menu{
+border-bottom: 1px solid #968a96;
+position: fixed;
+width: 100%;
+}
+#logo {
+    float: left;
+    height: 45px;
+
+}
+#logo img {
+    height: 100%;
+    width: auto;
+}
+#ul-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ul-head li{
+    
+    list-style: none    ;
+    font-size:45px;
+    
+    
+}
+#ul-head li a{
+    color: beige;
+    text-decoration: none;
+    padding: 0 100px;
+
+}
+#ul-head li a:hover{
+    color: #000;
+}

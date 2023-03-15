@@ -1,0 +1,36 @@
+*{
+    
+}
+
+
+
+.container{
+    background-color: #232323;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.Banner
+{
+    width: 100%;
+    background-color: #2F2727;
+}
+.Banner .Logo{
+    display: flex;
+
+}
+.Banner .Banner-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.content{
+    margin-top: 10% ;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
