@@ -1,7 +1,11 @@
 
 
 .container{
+<<<<<<< Updated upstream
     margin-top: 10%;
+=======
+    background-color: #232323;
+>>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -26,6 +30,7 @@
 }
 
 .content{
+<<<<<<< Updated upstream
     margin-left: 15%;
     margin-right: 15%;
     border: 1px solid aliceblue;
@@ -35,4 +40,11 @@
     text-align: center;
     color: white;
     padding: 100px;
+=======
+   
+    font-size: 50px;
+    text-align: center;
+    color: white;
+   
+>>>>>>> Stashed changes
 }
