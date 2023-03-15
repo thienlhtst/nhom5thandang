@@ -5,7 +5,6 @@
 
 
 .container{
-    background-color: #232323;
     margin-top: 10%;
     display: flex;
     flex-direction: column;
@@ -13,14 +12,15 @@
 }
 .Banner
 {
-    width: 100%;
-    background-color: #2F2727;
-}
-.Banner .Logo{
     display: flex;
+    justify-content: center;
+}
+.Banner .Logo img{
+    width: 300px;
 
 }
 .Banner .Banner-in{
+    margin-left: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,8 +29,13 @@
 }
 
 .content{
-    margin-top: 10% ;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid aliceblue;
+    background-color: #968a96;
+    margin-top: 20%;
     font-size: 50px;
     text-align: center;
     color: white;
+    padding: 100px;
 }
