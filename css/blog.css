@@ -21,6 +21,7 @@
 /* blog1 */
 
 .section.blog1 {
+    margin-top: 5%;
     background: url('../img/background-blog-2.jpg')no-repeat;
     background-position: center;
     background-size: cover;
