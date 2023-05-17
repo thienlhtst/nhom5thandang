@@ -15,8 +15,9 @@
     width: 90%;
     min-height: 70vh;
     margin: 0 auto 5vh auto;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 5px #fff;
 }
+
 
 /* blog1 */
 
@@ -48,7 +49,6 @@
     list-style-type: none;
     justify-content: center;
     display: flex;
-
 }
 
 .flex-control-nav.flex-control-paging li {
@@ -89,7 +89,9 @@
     color: blue;
 }
 
+
 /* blog2 */
+
 .section.blog2 {
     display: flex;
     padding: 20px;
@@ -131,7 +133,7 @@
     cursor: pointer;
 }
 
-.link-blog2 a{
+.link-blog2 a {
     padding: 15px;
     text-decoration: none;
     color: #000;
